@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /macros/latex/contrib/fragments
+# catalog-date 2009-01-16 17:12:15 +0100
+# catalog-license collection
+# catalog-version undef
 Name:		texlive-fragments
 Version:	20090116
 Release:	1
@@ -43,6 +49,7 @@ counters; and - subscript, defining a \textsubscript command.
 %{_texmfdistdir}/tex/latex/fragments/removefr.tex
 %{_texmfdistdir}/tex/latex/fragments/subscript.sty
 %doc %{_texmfdistdir}/doc/latex/fragments/README
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -53,3 +60,5 @@ counters; and - subscript, defining a \textsubscript command.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
