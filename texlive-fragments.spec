@@ -51,3 +51,17 @@ counters; and - subscript, defining a \textsubscript command.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20090116-2
++ Revision: 752092
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20090116-1
++ Revision: 718502
+- texlive-fragments
+- texlive-fragments
+- texlive-fragments
+- texlive-fragments
+
