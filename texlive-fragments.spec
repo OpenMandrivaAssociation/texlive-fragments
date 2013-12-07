@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-fragments
 Version:	20090116
-Release:	2
+Release:	3
 Summary:	Fragments of LaTeX code
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/fragments
