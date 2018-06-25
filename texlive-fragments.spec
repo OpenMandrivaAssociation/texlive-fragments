@@ -5,7 +5,7 @@
 # catalog-license collection
 # catalog-version undef
 Name:		texlive-fragments
-Version:	20170414
+Version:	20180303
 Release:	1
 Summary:	Fragments of LaTeX code
 Group:		Publishing
