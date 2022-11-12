@@ -1,18 +1,12 @@
-# revision 15878
-# category Package
-# catalog-ctan /macros/latex/contrib/fragments
-# catalog-date 2009-01-16 17:12:15 +0100
-# catalog-license collection
-# catalog-version undef
 Name:		texlive-fragments
-Version:	20190228
+Version:	15878
 Release:	1
 Summary:	Fragments of LaTeX code
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/fragments
 License:	COLLECTION
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fragments.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fragments.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fragments.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fragments.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -27,12 +21,12 @@ macro; - removefr, for removing 'reset' relations between
 counters; and - subscript, defining a \textsubscript command.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -44,24 +38,10 @@ counters; and - subscript, defining a \textsubscript command.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20090116-2
-+ Revision: 752092
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20090116-1
-+ Revision: 718502
-- texlive-fragments
-- texlive-fragments
-- texlive-fragments
-- texlive-fragments
-
